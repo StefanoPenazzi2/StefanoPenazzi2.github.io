@@ -8,6 +8,6 @@
 
 $$
 
-W_1(\mu, \nu) = \sup_{\phi \in \text{Lip}_1} \int_{\mathcal{X}} \phi(x) \, d\mu(x) - \int_{\mathcal{X}} \phi(x) \, d\nu(x),
+W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x, y) \sim \pi} \left[ \|x - y\|_2 \right] = \sup_{\|h\|_L \leq 1} \left[ \mathbb{E}_{x \sim p} [h(x)] - \mathbb{E}_{y \sim q} [h(x)] \right]
 
 $$
