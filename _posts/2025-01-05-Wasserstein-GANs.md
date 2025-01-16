@@ -2,8 +2,12 @@
 
 ---
 
-### This is a header
+### Kantorovich-Rubinstein Duality
 
-#### Some T-SQL Code
+**Theorem**
 
-#### Some PowerShell Code
+$$
+
+W_1(\mu, \nu) = \sup_{\phi \in \text{Lip}_1} \int_{\mathcal{X}} \phi(x) \, d\mu(x) - \int_{\mathcal{X}} \phi(x) \, d\nu(x),
+
+$$
