@@ -30,6 +30,7 @@ W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x, y) \sim \pi} \left[ \|x - y\|
 $$
 
 **Proof**
+Adding the Lagrangian multipliers $f, g : \mathcal{X} \rightarrow \mathbb{R}$.
 
 $$
 \begin{split}
@@ -39,11 +40,27 @@ L(\pi, f, g) = \int_{\chi \times \chi} \|x - y\|^2 \pi(x, y) \, dy \, dx
 \end{split}
 $$
 
+Lagrange multipliers are employed to transform a constrained optimization problem into an unconstrained one while preserving the same optimal solution.
+In this context, the constraints ensure that the marginals of $ \pi(\cdot, \cdot)$ remain $p$ and $q$. 
+For each value in the support of $p$, a penalty term $p(x) - \int_{\chi} \pi(x, y) \, dy$ is introduced 
+and scaled by its corresponding Lagrange multiplier $f(x)$.
+Minimizing the objective function thus involves reducing the discrepancy between $p(x)$ and $\int_{\chi} \pi(x, y) \, dy$
+ensuring the marginal condition is satisfied.
+
+Collecting terms algebraically, we can rewrite the Lagrangian as
 
 $$
 
 L(\pi, f, g) = \mathbb{E}_{x \sim p} \left[ f(x) \right] + \mathbb{E}_{y \sim q} \left[ g(y) \right] 
 + \int_{\mathcal{X} \times \mathcal{X}} \left( \|x - y\|_2 - f(x) - g(y) \right) \pi(x, y) \, dy \, dx.
+
+$$
+
+Since this function satisfies the conditions for strong duality, we can express it as:
+
+$$
+
+W(p, q) = \inf_{\pi} \sup_{f, g} L(\pi, f, g) = \sup_{f, g} \inf_{\pi} L(\pi, f, g).
 
 $$
 
