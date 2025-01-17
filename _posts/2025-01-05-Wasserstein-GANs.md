@@ -50,10 +50,10 @@ ensuring the marginal condition is satisfied.
 Collecting terms algebraically, we can rewrite the Lagrangian as
 
 $$
-
-L(\pi, f, g) = \mathbb{E}_{x \sim p} \left[ f(x) \right] + \mathbb{E}_{y \sim q} \left[ g(y) \right] 
-+ \int_{\mathcal{X} \times \mathcal{X}} \left( \|x - y\|_2 - f(x) - g(y) \right) \pi(x, y) \, dy \, dx.
-
+\begin{split}
+L(\pi, f, g) = \mathbb{E}_{x \sim p} \left[ f(x) \right] + \mathbb{E}_{y \sim q} \left[ g(y) \right] \\
++ \int_{\chi \times \chi} \left( \|x - y\|_2 - f(x) - g(y) \right) \pi(x, y) \, dy \, dx.
+\end{split}
 $$
 
 Since this function satisfies the conditions for strong duality, we can express it as:
