@@ -30,7 +30,7 @@ W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x, y) \sim \pi} \left[ \|x - y\|
 $$
 
 **Proof**
-Adding the Lagrangian multipliers $f, g : \mathcal{X} \rightarrow \mathbb{R}$.
+Adding the Lagrangian multipliers $f, g : \chi \rightarrow \mathbb{R}$.
 
 $$
 \begin{split}
@@ -51,7 +51,7 @@ Collecting terms algebraically, we can rewrite the Lagrangian as
 
 $$
 \begin{split}
-L(\pi, f, g) = \mathbb{E}_{x \sim p} \left[ f(x) \right] + \mathbb{E}_{y \sim q} \left[ g(y) \right] \\
+L(\pi, f, g) = \mathbb{E}_{x \sim p} \left[ f(x) \right] + \mathbb{E}_{y \sim q} \left[ g(y) \right]
 + \int_{\chi \times \chi} \left( \|x - y\|_2 - f(x) - g(y) \right) \pi(x, y) \, dy \, dx.
 \end{split}
 $$
@@ -63,4 +63,8 @@ $$
 W(p, q) = \inf_{\pi} \sup_{f, g} L(\pi, f, g) = \sup_{f, g} \inf_{\pi} L(\pi, f, g).
 
 $$
+
+![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_dist_supp.png?raw=true)
+
+![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_transport_plan.png?raw=true)
 
