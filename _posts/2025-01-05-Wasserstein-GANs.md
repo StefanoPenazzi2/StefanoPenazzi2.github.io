@@ -32,11 +32,11 @@ $$
 **Proof**
 
 $$
-
-L(\pi, f, g) = \int_{\Chi \times \Chi} \|x - y\|^2 \pi(x, y) \, dy \, dx 
-+ \int_{\Chi} \left( p(x) - \int_{\Chi} \pi(x, y) \, dy \right) f(x) \, dx 
-+ \int_{\Chi} \left( q(y) - \int_{\Chi} \pi(x, y) \, dx \right) g(y) \, dy.
-
+\begin{split}
+L(\pi, f, g) = \int_{\chi \times \chi} \|x - y\|^2 \pi(x, y) \, dy \, dx 
++ \int_{\chi} \left( p(x) - \int_{\chi} \pi(x, y) \, dy \right) f(x) \, dx \\
++ \int_{\chi} \left( q(y) - \int_{\chi} \pi(x, y) \, dx \right) g(y) \, dy.
+\end{split}
 $$
 
 
