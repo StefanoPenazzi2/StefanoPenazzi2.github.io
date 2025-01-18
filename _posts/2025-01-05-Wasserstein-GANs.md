@@ -74,3 +74,12 @@ $$
   &   \int_{\chi} \pi(x, y) \, dx =  q(y)\\
 \end{aligned}
 $$
+
+
+$$
+\begin{aligned}
+\min_{\pi} \quad & \sum_{i=1}^{n}\sum_{j=1}^{n} \|x_i - y_j\|^2 \pi(x_i, y_j) \\
+\textrm{s.t.} \quad & \sum_{j=1}^{n} \pi(x_i, y_j) = p(x_i) \; i = 1, \ldots, n.\\
+  &   \sum_{i=1}^{n} \pi(x_i, y_j) = q(y_j) \; j = 1, \ldots, m.\\
+\end{aligned}
+$$
