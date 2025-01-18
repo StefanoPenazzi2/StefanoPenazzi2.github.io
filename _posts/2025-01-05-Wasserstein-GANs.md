@@ -66,3 +66,11 @@ $$
 
 ![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_transport_plan.png?raw=true)
 
+
+$$
+\begin{aligned}
+\min_{\pi} \quad & \int_{\chi \times \chi} \|x - y\|^2 \pi(x, y) \, dy \, dx \\
+\textrm{s.t.} \quad & \int_{\chi} \pi(x, y) \, dy = p(x)\\
+  &   \int_{\chi} \pi(x, y) \, dx =  q(y)\\
+\end{aligned}
+$$
