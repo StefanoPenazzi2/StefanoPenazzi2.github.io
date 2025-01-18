@@ -87,9 +87,9 @@ $$
 $$
 
 \begin{aligned}
-& \min_{x} \, c^T x & & \quad \max_{y} \, b^T y \\
-& \text{s.t. } Ax \geq b, & & \quad \text{s.t. } A^T y \leq c, \\
-& \quad x \geq 0, & & \quad y \geq 0.
+& \min_{k} \, c^T k & & \quad \max_{z} \, b^T z \\
+& \text{s.t. } Ak \geq b, & & \quad \text{s.t. } A^T z \leq c, \\
+& \quad k \geq 0, & & \quad z \geq 0.
 \end{aligned}
 
 $$
@@ -103,3 +103,5 @@ $$
 \end{align*}
 
 $$
+
+![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_lin_prog.png?raw=true)
