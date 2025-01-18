@@ -64,7 +64,5 @@ W(p, q) = \inf_{\pi} \sup_{f, g} L(\pi, f, g) = \sup_{f, g} \inf_{\pi} L(\pi, f,
 
 $$
 
-<img src="https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_dist_supp.png" alt="alt text" width="500" height="500">
-
 ![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_transport_plan.png?raw=true)
 
