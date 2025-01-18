@@ -78,8 +78,18 @@ $$
 
 $$
 \begin{aligned}
-\min_{\pi} \quad & \sum_{i=1}^{n}\sum_{j=1}^{n} \|x_i - y_j\|^2 \pi(x_i, y_j) \\
+\min_{\pi} \quad & \sum_{i=1}^{n}\sum_{j=1}^{m} \|x_i - y_j\|^2 \pi(x_i, y_j) \\
 \textrm{s.t.} \quad & \sum_{j=1}^{n} \pi(x_i, y_j) = p(x_i) \; i = 1, \ldots, n.\\
   &   \sum_{i=1}^{n} \pi(x_i, y_j) = q(y_j) \; j = 1, \ldots, m.\\
 \end{aligned}
+$$
+
+$$
+
+\begin{aligned}
+& \min_{x} \, c^T x & & \quad \max_{y} \, b^T y \\
+& \text{s.t. } Ax \geq b, & & \quad \text{s.t. } A^T y \leq c, \\
+& \quad x \geq 0, & & \quad y \geq 0.
+\end{aligned}
+
 $$
