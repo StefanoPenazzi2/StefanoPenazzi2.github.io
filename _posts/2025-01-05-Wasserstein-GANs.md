@@ -93,3 +93,13 @@ $$
 \end{aligned}
 
 $$
+
+
+$$
+
+\begin{align*}
+\max_{f, g} \quad & \sum_{i=1}^{n} f(x_i) p(x_i) + \sum_{j=1}^{m} g(y_j) q(y_j) \\
+\text{s.t.} \quad & f(x_i) + g(y_j) \leq \|x_i - y_j\|^2, \quad \forall i, j.
+\end{align*}
+
+$$
