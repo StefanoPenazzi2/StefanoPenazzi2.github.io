@@ -105,3 +105,12 @@ $$
 $$
 
 ![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_lin_prog.png?raw=true)
+
+$$
+
+\begin{align*}
+W(p, q) = & \sup_{\substack{f, g \\ f(x) + g(y) \leq \|x - y\|_2}} \left[ \mathbb{E}_{x \sim p} [f(x)] + \mathbb{E}_{y \sim q} [g(y)] \right] \\
+\leq & \sup_{\|h\|_L \leq 1} \left[ \mathbb{E}_{x \sim p} [h(x)] - \mathbb{E}_{y \sim q} [h(y)] \right] \leq W(p, q).
+\end{align*}
+
+$$
