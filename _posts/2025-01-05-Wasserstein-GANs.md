@@ -87,7 +87,7 @@ $$
 
 $$
 
-In order to transform our discretized constrained optimization problem in the primal form above a few transformations are required.
+In order to transform our discretized constrained optimization problem in the primal standard form above a few transformations are required.
 The image illustrates the transformation of the discretized constrained optimization problem into its necessary primal form.
 This process involves several key transformations: 
 
@@ -100,6 +100,12 @@ These transformations facilitate the handling of the optimization problem in a s
 
 ![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_lin_prog.png?raw=true)
 
+In our optimization model, each dual variable is associated with a specific primal constraint. We have two types of constraints:
+those ensuring the marginal $p(x)$ is respected, and those ensuring the marginal $q(y)$ is respected. For each discrete value $x_i$
+and $y_j$, there is a corresponding constraint. The dual variables linked to the $p(x)$ constraints are denoted by $f(x)$,
+while those linked to the $q(y)$ constraints are denoted by $g(y)$. While treating these dual variables as functions is not strictly
+necessary for solving the dual problem, it provides a strategic advantage.
+The dual problem can be rewritten as below
 
 $$
 
@@ -109,6 +115,15 @@ $$
 \end{align*}
 
 $$
+
+Let's examine the dual constraints more closely. The minimum value of the distance $\|x_i - y_j\|^2$ is 0 when $x_i = y_j$,
+which results in the strictest constraint $f(x_i) + g(x_i) \leq 0$. This implies that $f(x_i)$ and $g(x_i)$ cannot both
+be positive at the same time, enforcing $f(x_i) \leq -g(x_i)$. The maximum value of $f(x_i) + g(x_i)$ that respects the
+constraints is 0. We can increase the value of $f(x_i)$ indefinitely, provided $f(x_i) = -g(x_i)$.
+
+Since the objective function of the dual problem is $b^T z = p(x_1)f(x_1) + p(x_2)f(x_2) + \ldots + q(y_1)g(y_1) + q(y_2)g(y_2) + \ldots$,
+$f(x_i)$ always impacts the objective function positively, while $-g(x_i)$ impacts it negatively. Therefore,
+the maximum value is achieved when the constraint $f(x_i) \leq -g(x_i)$ is an equality. This means we can substitute $g(x_i) = -f(x_i)$.
 
 
 $$
