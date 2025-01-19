@@ -55,7 +55,7 @@ $$
 
 The objective is to minimize the expected cost of transporting a distribution $p(x)$ to $q(y)$,
 where the cost is quantified by the squared Euclidean distance $\|x - y\|^2$ weighted by the
-joint distribution $\pi(x, y)$. The constraints ensure that the marginals of $\(\pi\)$ match
+joint distribution $\pi(x, y)$. The constraints ensure that the marginals of $\pi$ match
 the given distributions $p(x)$ and $q(y)$.
 
 By discretizing the supports of $x$ and $y$, we can replace the continuous integrals with finite sums,
@@ -140,37 +140,62 @@ $$
 
 
 
-**Proof 2**
-Adding the Lagrangian multipliers $f, g : \chi \rightarrow \mathbb{R}$.
+[//]: # (**Proof 2**)
 
-$$
-\begin{split}
-L(\pi, f, g) = \int_{\chi \times \chi} \|x - y\|^2 \pi(x, y) \, dy \, dx 
-+ \int_{\chi} \left( p(x) - \int_{\chi} \pi(x, y) \, dy \right) f(x) \, dx \\
-+ \int_{\chi} \left( q(y) - \int_{\chi} \pi(x, y) \, dx \right) g(y) \, dy.
-\end{split}
-$$
+[//]: # (Adding the Lagrangian multipliers $f, g : \chi \rightarrow \mathbb{R}$.)
 
-Lagrange multipliers are employed to transform a constrained optimization problem into an unconstrained one while preserving the same optimal solution.
-In this context, the constraints ensure that the marginals of $ \pi(\cdot, \cdot)$ remain $p$ and $q$. 
-For each value in the support of $p$, a penalty term $p(x) - \int_{\chi} \pi(x, y) \, dy$ is introduced 
-and scaled by its corresponding Lagrange multiplier $f(x)$.
-Minimizing the objective function thus involves reducing the discrepancy between $p(x)$ and $\int_{\chi} \pi(x, y) \, dy$
-ensuring the marginal condition is satisfied.
+[//]: # ()
+[//]: # ($$)
 
-Collecting terms algebraically, we can rewrite the Lagrangian as
+[//]: # (\begin{split})
 
-$$
-\begin{split}
-L(\pi, f, g) = \mathbb{E}_{x \sim p} \left[ f(x) \right] + \mathbb{E}_{y \sim q} \left[ g(y) \right]
-+ \int_{\chi \times \chi} \left( \|x - y\|_2 - f(x) - g(y) \right) \pi(x, y) \, dy \, dx.
-\end{split}
-$$
+[//]: # (L&#40;\pi, f, g&#41; = \int_{\chi \times \chi} \|x - y\|^2 \pi&#40;x, y&#41; \, dy \, dx )
 
-Since this function satisfies the conditions for strong duality, we can express it as:
+[//]: # (+ \int_{\chi} \left&#40; p&#40;x&#41; - \int_{\chi} \pi&#40;x, y&#41; \, dy \right&#41; f&#40;x&#41; \, dx \\)
 
-$$
+[//]: # (+ \int_{\chi} \left&#40; q&#40;y&#41; - \int_{\chi} \pi&#40;x, y&#41; \, dx \right&#41; g&#40;y&#41; \, dy.)
 
-W(p, q) = \inf_{\pi} \sup_{f, g} L(\pi, f, g) = \sup_{f, g} \inf_{\pi} L(\pi, f, g).
+[//]: # (\end{split})
 
-$$
+[//]: # ($$)
+
+[//]: # ()
+[//]: # (Lagrange multipliers are employed to transform a constrained optimization problem into an unconstrained one while preserving the same optimal solution.)
+
+[//]: # (In this context, the constraints ensure that the marginals of $ \pi&#40;\cdot, \cdot&#41;$ remain $p$ and $q$. )
+
+[//]: # (For each value in the support of $p$, a penalty term $p&#40;x&#41; - \int_{\chi} \pi&#40;x, y&#41; \, dy$ is introduced )
+
+[//]: # (and scaled by its corresponding Lagrange multiplier $f&#40;x&#41;$.)
+
+[//]: # (Minimizing the objective function thus involves reducing the discrepancy between $p&#40;x&#41;$ and $\int_{\chi} \pi&#40;x, y&#41; \, dy$)
+
+[//]: # (ensuring the marginal condition is satisfied.)
+
+[//]: # ()
+[//]: # (Collecting terms algebraically, we can rewrite the Lagrangian as)
+
+[//]: # ()
+[//]: # ($$)
+
+[//]: # (\begin{split})
+
+[//]: # (L&#40;\pi, f, g&#41; = \mathbb{E}_{x \sim p} \left[ f&#40;x&#41; \right] + \mathbb{E}_{y \sim q} \left[ g&#40;y&#41; \right])
+
+[//]: # (+ \int_{\chi \times \chi} \left&#40; \|x - y\|_2 - f&#40;x&#41; - g&#40;y&#41; \right&#41; \pi&#40;x, y&#41; \, dy \, dx.)
+
+[//]: # (\end{split})
+
+[//]: # ($$)
+
+[//]: # ()
+[//]: # (Since this function satisfies the conditions for strong duality, we can express it as:)
+
+[//]: # ()
+[//]: # ($$)
+
+[//]: # ()
+[//]: # (W&#40;p, q&#41; = \inf_{\pi} \sup_{f, g} L&#40;\pi, f, g&#41; = \sup_{f, g} \inf_{\pi} L&#40;\pi, f, g&#41;.)
+
+[//]: # ()
+[//]: # ($$)
