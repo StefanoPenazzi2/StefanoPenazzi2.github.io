@@ -81,8 +81,8 @@ $$
 
 \begin{aligned}
 & \min_{k} \, c^T k & = & \quad \max_{z} \, b^T z \\
-& \text{s.t. } Ak \geq b, & & & \quad \text{s.t. } A^T z \leq c, \\
-& \quad k \geq 0, & & & \quad z \geq 0.
+& \text{s.t. } Ak \geq b, &  & \quad \text{s.t. } A^T z \leq c, \\
+& \quad k \geq 0, &  & \quad z \geq 0.
 \end{aligned}
 
 $$
