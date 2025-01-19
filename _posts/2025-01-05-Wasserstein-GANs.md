@@ -87,6 +87,19 @@ $$
 
 $$
 
+In order to transform our discretized constrained optimization problem in the primal form above a few transformations are required.
+The image illustrates the transformation of the discretized constrained optimization problem into its necessary primal form.
+This process involves several key transformations: 
+
+- The joint distribution $\pi$ is vectorized into $k$, which serves as the model's variable.
+- The marginals' probabilities are concatenated into vector $b$.
+- The distance matrix is vectorized into $c$.
+- The matrix $A$ is constructed to ensure that given $b$ and $k$, the constraints on the marginals are correctly enforced.
+
+These transformations facilitate the handling of the optimization problem in a structured and solvable form.
+
+![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_lin_prog.png?raw=true)
+
 
 $$
 
@@ -97,7 +110,6 @@ $$
 
 $$
 
-![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_lin_prog.png?raw=true)
 
 $$
 
