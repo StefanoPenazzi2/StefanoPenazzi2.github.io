@@ -29,7 +29,7 @@ W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x, y) \sim \pi} \left[ \|x - y\|
 
 $$
 
-The joint probability distribution $\pi(x, y)# is introduced as a computational tool rather than representing an
+The joint probability distribution $\pi(x, y)$ is introduced as a computational tool rather than representing an
 inherent physical or probabilistic relationship between $x$ and $y$. The use of $\pi(x, y)$ facilitates the
 modeling of transport plans that minimize the expected transportation cost between $p(x)$ and $q(y)$.
 While $\pi(x, y)$ satisfies real constraints, ensuring correct marginals of $p(x)$ and $q(y)$, it primarily 
