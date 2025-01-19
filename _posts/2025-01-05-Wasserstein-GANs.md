@@ -29,7 +29,84 @@ W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x, y) \sim \pi} \left[ \|x - y\|
 
 $$
 
-**Proof**
+The joint probability distribution $\(\pi(x, y)\)# is introduced as a computational tool rather than representing an
+inherent physical or probabilistic relationship between $\(x\)$ and $\(y\)$. The use of $\(\pi(x, y)\)$ facilitates the
+modeling of transport plans that minimize the expected transportation cost between $\(p(x)\)$ and $\(q(y)\)$.
+While $\(\pi(x, y)\)$ satisfies real constraints, ensuring correct marginals of $\(p(x)\)$ and $\(q(y)\)$, it primarily 
+serves to bridge the source and target distributions in an abstract space. The interpretation of $\(\pi(x, y)\)$ as a
+joint distribution is metaphorical; its practical significance lies in encapsulating all possible ways to map the
+source distribution to the target within the given constraints.
+
+**Proof 1**
+
+
+$W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x, y) \sim \pi} \left[ \|x - y\|_2 \right]$ this can be rewritten into
+
+$$
+\begin{aligned}
+\min_{\pi} \quad & \int_{\chi \times \chi} \|x - y\|^2 \pi(x, y) \, dy \, dx \\
+\textrm{s.t.} \quad & \int_{\chi} \pi(x, y) \, dy = p(x)\\
+  &   \int_{\chi} \pi(x, y) \, dx =  q(y)\\
+\end{aligned}
+$$
+
+The objective is to minimize the expected cost of transporting a distribution \(p(x)\) to \(q(y)\),
+where the cost is quantified by the squared Euclidean distance $\(\|x - y\|^2\)$ weighted by the
+joint distribution $\(\pi(x, y)\)$. The constraints ensure that the marginals of $\(\pi\)$ match
+the given distributions $\(p(x)\)$ and $\(q(y)\)$.
+
+By discretizing the supports of $\(x\)$ and $\(y\)$, we can replace the continuous integrals with finite sums,
+which simplifies the problem into a discrete optimization framework.
+This transformation allows us to use linear programming, where the discrete set of values for $\(x\)$ and $\(y\)$
+results in specific constraints for each pair $\((x_i, y_j)\)$. The discrete formulation eases computation
+and aligns with practical scenarios where data is often collected or represented in discrete form.
+
+$$
+\begin{aligned}
+\min_{\pi} \quad & \sum_{i=1}^{n}\sum_{j=1}^{m} \|x_i - y_j\|^2 \pi(x_i, y_j) \\
+\textrm{s.t.} \quad & \sum_{j=1}^{n} \pi(x_i, y_j) = p(x_i) \; i = 1, \ldots, n.\\
+  &   \sum_{i=1}^{n} \pi(x_i, y_j) = q(y_j) \; j = 1, \ldots, m.\\
+\end{aligned}
+$$
+
+
+![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_transport_plan.png?raw=true)
+
+
+$$
+
+\begin{aligned}
+& \min_{k} \, c^T k & & \quad \max_{z} \, b^T z \\
+& \text{s.t. } Ak \geq b, & & \quad \text{s.t. } A^T z \leq c, \\
+& \quad k \geq 0, & & \quad z \geq 0.
+\end{aligned}
+
+$$
+
+
+$$
+
+\begin{align*}
+\max_{f, g} \quad & \sum_{i=1}^{n} f(x_i) p(x_i) + \sum_{j=1}^{m} g(y_j) q(y_j) \\
+\text{s.t.} \quad & f(x_i) + g(y_j) \leq \|x_i - y_j\|^2, \quad \forall i, j.
+\end{align*}
+
+$$
+
+![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_lin_prog.png?raw=true)
+
+$$
+
+\begin{align*}
+W(p, q) = & \sup_{\substack{f, g \\ f(x) + g(y) \leq \|x - y\|_2}} \left[ \mathbb{E}_{x \sim p} [f(x)] + \mathbb{E}_{y \sim q} [g(y)] \right] \\
+\leq & \sup_{\|h\|_L \leq 1} \left[ \mathbb{E}_{x \sim p} [h(x)] - \mathbb{E}_{y \sim q} [h(y)] \right] \leq W(p, q).
+\end{align*}
+
+$$
+
+
+
+**Proof 2**
 Adding the Lagrangian multipliers $f, g : \chi \rightarrow \mathbb{R}$.
 
 $$
@@ -61,56 +138,5 @@ Since this function satisfies the conditions for strong duality, we can express 
 $$
 
 W(p, q) = \inf_{\pi} \sup_{f, g} L(\pi, f, g) = \sup_{f, g} \inf_{\pi} L(\pi, f, g).
-
-$$
-
-![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_transport_plan.png?raw=true)
-
-
-$$
-\begin{aligned}
-\min_{\pi} \quad & \int_{\chi \times \chi} \|x - y\|^2 \pi(x, y) \, dy \, dx \\
-\textrm{s.t.} \quad & \int_{\chi} \pi(x, y) \, dy = p(x)\\
-  &   \int_{\chi} \pi(x, y) \, dx =  q(y)\\
-\end{aligned}
-$$
-
-
-$$
-\begin{aligned}
-\min_{\pi} \quad & \sum_{i=1}^{n}\sum_{j=1}^{m} \|x_i - y_j\|^2 \pi(x_i, y_j) \\
-\textrm{s.t.} \quad & \sum_{j=1}^{n} \pi(x_i, y_j) = p(x_i) \; i = 1, \ldots, n.\\
-  &   \sum_{i=1}^{n} \pi(x_i, y_j) = q(y_j) \; j = 1, \ldots, m.\\
-\end{aligned}
-$$
-
-$$
-
-\begin{aligned}
-& \min_{k} \, c^T k & & \quad \max_{z} \, b^T z \\
-& \text{s.t. } Ak \geq b, & & \quad \text{s.t. } A^T z \leq c, \\
-& \quad k \geq 0, & & \quad z \geq 0.
-\end{aligned}
-
-$$
-
-
-$$
-
-\begin{align*}
-\max_{f, g} \quad & \sum_{i=1}^{n} f(x_i) p(x_i) + \sum_{j=1}^{m} g(y_j) q(y_j) \\
-\text{s.t.} \quad & f(x_i) + g(y_j) \leq \|x_i - y_j\|^2, \quad \forall i, j.
-\end{align*}
-
-$$
-
-![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_lin_prog.png?raw=true)
-
-$$
-
-\begin{align*}
-W(p, q) = & \sup_{\substack{f, g \\ f(x) + g(y) \leq \|x - y\|_2}} \left[ \mathbb{E}_{x \sim p} [f(x)] + \mathbb{E}_{y \sim q} [g(y)] \right] \\
-\leq & \sup_{\|h\|_L \leq 1} \left[ \mathbb{E}_{x \sim p} [h(x)] - \mathbb{E}_{y \sim q} [h(y)] \right] \leq W(p, q).
-\end{align*}
 
 $$
