@@ -29,11 +29,11 @@ W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x, y) \sim \pi} \left[ \|x - y\|
 
 $$
 
-The joint probability distribution $\(\pi(x, y)\)# is introduced as a computational tool rather than representing an
-inherent physical or probabilistic relationship between $\(x\)$ and $\(y\)$. The use of $\(\pi(x, y)\)$ facilitates the
-modeling of transport plans that minimize the expected transportation cost between $\(p(x)\)$ and $\(q(y)\)$.
-While $\(\pi(x, y)\)$ satisfies real constraints, ensuring correct marginals of $\(p(x)\)$ and $\(q(y)\)$, it primarily 
-serves to bridge the source and target distributions in an abstract space. The interpretation of $\(\pi(x, y)\)$ as a
+The joint probability distribution $\pi(x, y)# is introduced as a computational tool rather than representing an
+inherent physical or probabilistic relationship between $x$ and $y$. The use of $\pi(x, y)$ facilitates the
+modeling of transport plans that minimize the expected transportation cost between $p(x)$ and $q(y)$.
+While $\pi(x, y)$ satisfies real constraints, ensuring correct marginals of $p(x)$ and $q(y)$, it primarily 
+serves to bridge the source and target distributions in an abstract space. The interpretation of $\pi(x, y)$ as a
 joint distribution is metaphorical; its practical significance lies in encapsulating all possible ways to map the
 source distribution to the target within the given constraints.
 
@@ -50,15 +50,15 @@ $$
 \end{aligned}
 $$
 
-The objective is to minimize the expected cost of transporting a distribution \(p(x)\) to \(q(y)\),
-where the cost is quantified by the squared Euclidean distance $\(\|x - y\|^2\)$ weighted by the
-joint distribution $\(\pi(x, y)\)$. The constraints ensure that the marginals of $\(\pi\)$ match
-the given distributions $\(p(x)\)$ and $\(q(y)\)$.
+The objective is to minimize the expected cost of transporting a distribution $p(x)$ to $q(y)$,
+where the cost is quantified by the squared Euclidean distance $\|x - y\|^2$ weighted by the
+joint distribution $\pi(x, y)$. The constraints ensure that the marginals of $\(\pi\)$ match
+the given distributions $p(x)$ and $q(y)$.
 
-By discretizing the supports of $\(x\)$ and $\(y\)$, we can replace the continuous integrals with finite sums,
+By discretizing the supports of $x$ and $y$, we can replace the continuous integrals with finite sums,
 which simplifies the problem into a discrete optimization framework.
-This transformation allows us to use linear programming, where the discrete set of values for $\(x\)$ and $\(y\)$
-results in specific constraints for each pair $\((x_i, y_j)\)$. The discrete formulation eases computation
+This transformation allows us to use linear programming, where the discrete set of values for $x$ and $y$
+results in specific constraints for each pair $(x_i, y_j)$. The discrete formulation eases computation
 and aligns with practical scenarios where data is often collected or represented in discrete form.
 
 $$
