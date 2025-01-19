@@ -16,6 +16,9 @@ $p$ to another distribution $q$. When two distributions are very similar, the ma
 $x$ that are very close to corresponding points in $y$, ensuring an efficient transformation of $p$ into $q$.
 However, directly computing $W(p,q)$ is often intractable due to the sheer size of the set  $\Pi(p, q)$
 
+![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_transport_plan.png?raw=true)
+
+
 
 ### Kantorovich-Rubinstein Duality
 
@@ -69,9 +72,10 @@ $$
 \end{aligned}
 $$
 
-
-![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/wasserstein_dual_transport_plan.png?raw=true)
-
+The strong duality theorem states that if either the primal or dual linear program has an optimal solution,
+the other also attains an optimal solution, with both achieving the same objective value, thereby making
+the weak duality bounds tight (the result is closely related to Farkas' Lemma, which provides a foundational
+condition for the solvability of linear inequalities).
 
 $$
 
