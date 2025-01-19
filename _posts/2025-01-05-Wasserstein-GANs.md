@@ -119,9 +119,12 @@ $$
 Let's examine the dual constraints more closely. The minimum value of the distance $\|x_i - y_j\|^2$ is 0 when $x_i = y_j$,
 which results in the strictest constraint $f(x_i) + g(x_i) \leq 0$. This implies that $f(x_i)$ and $g(x_i)$ cannot both
 be positive at the same time, enforcing $f(x_i) \leq -g(x_i)$. The maximum value of $f(x_i) + g(x_i)$ that respects the
-constraints is 0. We can increase the value of $f(x_i)$ indefinitely, provided $f(x_i) = -g(x_i)$.
+constraints is 0. We can increase the value of $f(x_i)$ indefinitely, provided $f(x_i) = -g(x_i)$. Since the objective function of the dual problem is
 
-Since the objective function of the dual problem is $b^T z = p(x_1)f(x_1) + p(x_2)f(x_2) + \ldots + q(y_1)g(y_1) + q(y_2)g(y_2) + \ldots$,
+$$
+b^T z = p(x_1)f(x_1) + p(x_2)f(x_2) + \ldots + q(y_1)g(y_1) + q(y_2)g(y_2) + \ldots
+$$
+
 $f(x_i)$ always impacts the objective function positively, while $-g(x_i)$ impacts it negatively. Therefore,
 the maximum value is achieved when the constraint $f(x_i) \leq -g(x_i)$ is an equality. This means we can substitute $g(x_i) = -f(x_i)$.
 
