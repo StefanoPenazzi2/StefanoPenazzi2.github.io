@@ -1,4 +1,4 @@
-## Wasserstein Generative Adversarial Neural Networks
+## Kantorovich-Rubinstein Duality
 
 ---
 
