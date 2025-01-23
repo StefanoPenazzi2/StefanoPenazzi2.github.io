@@ -1,4 +1,4 @@
-## Conditional-Table-GAN
+## Transfer Learning in GANs
 
 ---
 
