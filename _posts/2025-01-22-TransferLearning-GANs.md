@@ -53,7 +53,7 @@ are similar to samples from p^T_{data}(x).
 
 ***Feature distillation***
 
-
+![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/gans_transferlearning/featuredistillation.png?raw=true)
 
 ***FreezeD***
 
