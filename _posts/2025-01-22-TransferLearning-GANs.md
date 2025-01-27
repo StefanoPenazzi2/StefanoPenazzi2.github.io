@@ -6,7 +6,14 @@
 
 ![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/gans_transferlearning/finetuning.png?raw=true)
 
-***L2-SP***
+***Regularization***
+
+In addition to starting with a pre-trained model and utilizing early stopping, fine-tuning lacks specific mechanisms 
+to preserve features acquired from the source task. Implementing regularization techniques that explicitly encourage
+the final model to align closely with the initial model can effectively enhance feature retention.
+
+![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/gans_transferlearning/regularization.png?raw=true)
+
 
 ***Adaptive Batch Normalization (Domain Adaptation)***
 
@@ -32,9 +39,6 @@ Given the pre-trained DNN model and a target domain, Adaptive Batch Normalizatio
    $$
 
 
-
-***Generative latent optimization (GLO)***
-
 ***MineGAN***
 
 We aim to approximate a target real data distribution $p_T^{\text{data}}(x)$, derived from a set of real images $D_T$.
@@ -47,10 +51,13 @@ are similar to samples from p^T_{data}(x).
 
 ![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/gans_transferlearning/minegan.png?raw=true)
 
+***Feature distillation***
+
+
 
 ***FreezeD***
 
-***Feature distillation***
+***Generative latent optimization (GLO)***
 
 
 
