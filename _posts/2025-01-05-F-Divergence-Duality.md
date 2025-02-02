@@ -37,6 +37,39 @@ D_f(P \| Q) =
 \end{cases}
 $$
 
+We call \( f \) the generator of \( D_f \).
+
+In concrete applications, there is usually a reference distribution $ \mu $ on $ \Omega $ (for example, when $ \Omega = \mathbb{R}^n $,
+the reference distribution is the Lebesgue measure), such that $ P, Q \ll \mu $. Then we can use the Radon–Nikodym theorem to take
+their probability densities $ p $ and $ q $, giving
+
+$$
+
+D_f(P \parallel Q) = \int_{\Omega} f\left(\frac{p(x)}{q(x)}\right) q(x) \, d\mu(x)
+
+$$
+
+The Lebesgue measure $\mu(x)$ is a generalization of the concept of length or volume in mathematical analysis.
+It allows integration over more general sets in a space $\Omega$ than traditional Riemann integration.
+When the underlying space $\Omega$ is the real line or $\mathbb{R}^n$, and $ p(x) $ and $ q(x) $ are probability density
+functions with respect to the Lebesgue measure, then $ d\mu(x) $ can often be written as $ dx $.
+This is because the Lebesgue measure on $\mathbb{R}$ or $\mathbb{R}^n$ simply corresponds to the usual way we measure length
+or volume on those spaces.
+
+$$
+
+D_f(P \parallel Q)  = \int_{\Omega} f\left(\frac{p(x)}{q(x)}\right) q(x) \, d(x)
+
+$$
+
+For the discrete case, with $Q(x)$ and $P(x)$ being the respective pmfs, we can also write
+
+$$
+
+D_f(P \parallel Q) \triangleq \mathbb{E}_Q \left[ f \left( \frac{dP}{dQ} \right) \right] = \sum_x Q(x) f \left( \frac{P(x)}{Q(x)} \right)
+
+$$
+
 ### F-divergences duality
 
 **Theorem 1** _For any f-divergence, we have:_
