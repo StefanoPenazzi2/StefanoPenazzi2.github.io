@@ -37,9 +37,9 @@ D_f(P \| Q) =
 \end{cases}
 $$
 
-We call \( f \) the generator of \( D_f \).
+We call $ f $ the generator of $ D_f $.
 
-In concrete applications, there is usually a reference distribution $ \mu $ on $ \Omega $ (for example, when $ \Omega = \mathbb{R}^n $,
+In real applications, there is usually a reference distribution $ \mu $ on $ \Omega $ (for example, when $ \Omega = \mathbb{R}^n $,
 the reference distribution is the Lebesgue measure), such that $ P, Q \ll \mu $. Then we can use the Radon–Nikodym theorem to take
 their probability densities $ p $ and $ q $, giving
 
