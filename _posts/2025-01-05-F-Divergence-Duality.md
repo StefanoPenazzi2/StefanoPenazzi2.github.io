@@ -18,7 +18,7 @@ _where $ I^* $ is the domain of $ f^* $, determined by the values of $ y $ for w
 
 - $ f^* $ _is continuous on its domain,_
 - $ f^* $ _is convex,_
-- Biconjugation: $$(f^{*})^{*} = f$$
+- Biconjugation: $$f^{**} = f$$
 
 ### F-divergences
 
