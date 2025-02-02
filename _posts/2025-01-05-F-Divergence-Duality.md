@@ -37,12 +37,6 @@ D_f(P \| Q) =
 \end{cases}
 $$
 
-where:
-
-- $ \frac{dP}{dQ} $ is the **Radon–Nikodym derivative** of P with respect to Q,
-- $ P \ll Q $ indicates that P is absolutely continuous with respect to Q (i.e., $ P(A) = 0 $ whenever $ Q(A) = 0 $),
-- $ f : I \to \mathbb{R} $ is a convex function satisfying $ f(1) = 0 $.
-
 ### F-divergences duality
 
 **Theorem 1** _For any f-divergence, we have:_
