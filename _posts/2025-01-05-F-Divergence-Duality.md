@@ -75,7 +75,7 @@ $$
 **Theorem 1** _For any f-divergence, we have:_
 
 $$
-D_f(P \| Q) = \sup_{g : \Omega \to \mathbb{R}} \left\{ \mathbb{E}_P[g(X)] - \mathbb{E}_Q[f^*(g(X))] \right\},
+D_f(P \| Q) = \sup_{g : \Omega \to \mathbb{R}} \left\{ \mathbb{E}_P[g(x)] - \mathbb{E}_Q[f^*(g(x))] \right\},
 $$
 
 where:
@@ -83,9 +83,9 @@ where:
 - $ P $ and $ Q $ are probability distributions over a common measurable space $ (\Omega, \mathcal{F}) $,
 - $ f : I \to \mathbb{R} $ is a convex function,
 - $ f^* $ is the convex conjugate of $ f $,
-- $ g(X) $ can be any function for which $ \mathbb{E}_Q[f^*(g(X))] $ and $ \mathbb{E}_P[g(X)] $ are finite,
-- $ \mathbb{E}_Q[f^{*}(g(X))] $ is the expectation under $ Q $, 
-- $ \mathbb{E}_P[g(X)] $ is the expectation of $ g(X) $ under $ P $
+- $ g(x) $ can be any function for which $ \mathbb{E}_Q[f^*(g(x))] $ and $ \mathbb{E}_P[g(x)] $ are finite,
+- $ \mathbb{E}_Q[f^{*}(g(x))] $ is the expectation under $ Q $, 
+- $ \mathbb{E}_P[g(x)] $ is the expectation of $ g(x) $ under $ P $
 
 
 
