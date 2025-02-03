@@ -83,7 +83,7 @@ where:
 - $ P $ and $ Q $ are probability distributions over a common measurable space $ (\Omega, \mathcal{F}) $,
 - $ f : I \to \mathbb{R} $ is a convex function,
 - $ f^* $ is the convex conjugate of $ f $,
-- $ g(X) $ can be any function for which $ \mathbb{E}_Q[f^*(g(X))] $ and $ \mathbb{E}_P[g(X)] $ is finite,
+- $ g(X) $ can be any function for which $ \mathbb{E}_Q[f^*(g(X))] $ and $ \mathbb{E}_P[g(X)] $ are finite,
 - $ \mathbb{E}_Q[f^{*}(g(X))] $ is the expectation under $ Q $, 
 - $ \mathbb{E}_P[g(X)] $ is the expectation of $ g(X) $ under $ P $
 
