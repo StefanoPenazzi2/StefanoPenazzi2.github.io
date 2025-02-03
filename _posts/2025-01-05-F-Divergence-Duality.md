@@ -20,7 +20,7 @@ _where $ I^* $ is the domain of $ f^* $, determined by the values of $ y $ for w
 - $ f^* $ _is convex,_
 - Biconjugation: $$f^{**} = f$$
 
-### F-divergences
+### F-divergence
 
 ![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/2d_dist_comp_gans.png?raw=true)
 
@@ -70,7 +70,7 @@ D_f(P \parallel Q) \triangleq \mathbb{E}_Q \left[ f \left( \frac{dP}{dQ} \right)
 
 $$
 
-### F-divergences duality
+### F-divergence duality
 
 **Theorem 1** _For any f-divergence, we have:_
 
