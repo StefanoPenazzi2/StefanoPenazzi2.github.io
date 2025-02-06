@@ -25,7 +25,7 @@ _where $ I^* $ is the domain of $ f^* $, determined by the values of $ y $ for w
 ![alt text](https://github.com/StefanoPenazzi2/StefanoPenazzi2.github.io/blob/main/imgs/2d_dist_comp_gans.png?raw=true)
 
 Let P and Q be two probability distributions over a space $ \Omega $, such that $ P \ll Q $, that is, P is
-absolutely continuous with respect to Q (i.e., $ P(A) = 0 $ whenever $ Q(A) = 0 $). Then, for a convex function $ f: [0, +\infty) \to (-\infty,+\infty] $
+absolutely continuous with respect to Q (i.e., $ P(x) = 0 $ whenever $ Q(x) = 0 $). Then, for a convex function $ f: [0, +\infty) \to (-\infty,+\infty] $
 such that $ f(x) $ is finite for all $ x > 0 $, $ f(1) = 0 $, and $ f(0) = \lim_{t \to 0^+} f(t) $
 (which could be infinite), the f-divergence of P from Q is defined as.
 
